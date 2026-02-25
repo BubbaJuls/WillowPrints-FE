@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optional: point API calls to WP-BE in development
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+    ],
+  },
   async rewrites() {
-    return [
-      // Example: { source: '/api', destination: 'http://localhost:4000/api' },
-    ];
+    return [];
   },
 };
 

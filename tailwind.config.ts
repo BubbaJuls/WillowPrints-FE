@@ -10,7 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Shadcn / theme colors can be extended here
+        // WillowPrints pastel palette (minimal, clean – willow.prints style)
+        pastel: {
+          cream: '#faf8f5',
+          mist: '#f0ebe3',
+          sage: '#9caa8a',
+          blush: '#e8dcd5',
+          ink: '#3d3d3d',
+          border: '#e5dfd8',
+        },
+        // Shadcn / theme colors
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

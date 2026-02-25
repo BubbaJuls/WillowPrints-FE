@@ -54,3 +54,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Pastel theme overrides for WillowPrints pages */
+.willow-route {
+  --background: 40 33% 98%;
+  --foreground: 0 0% 24%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 24%;
+  --primary: 90 18% 55%;
+  --primary-foreground: 0 0% 24%;
+  --muted: 40 25% 94%;
+  --muted-foreground: 0 0% 45%;
+  --border: 30 20% 90%;
+}
