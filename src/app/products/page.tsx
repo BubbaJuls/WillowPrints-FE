@@ -15,10 +15,10 @@ export default function ProductsPage() {
     <div className="willow-route flex min-h-screen flex-col bg-pastel-cream">
       <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6">
         <h1 className="text-2xl font-semibold text-pastel-ink sm:text-3xl">
-          All prints
+          All products
         </h1>
         <p className="mt-1 text-pastel-ink/70">
-          Browse our full collection.
+          Browse our full collection of handcrafted totes, mugs, and keychains.
         </p>
 
         {/* Search bar – placeholder, no functionality yet */}

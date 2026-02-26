@@ -1,6 +1,6 @@
 /**
  * Fallback product data when API is not configured.
- * Prices in Philippine pesos (PHP). Images in public/products/.
+ * Prices in Philippine pesos (PHP), two decimals. Images in public/products/.
  */
 
 import type { Product, HeroSlide } from '@/types/product';
@@ -12,8 +12,8 @@ const initialProducts: Product[] = [
     id: '1',
     name: 'Willow.Prints Logo Tote Bag',
     description:
-      'Cream canvas tote with the Willow.Prints Arts & Crafts logo. Sturdy, natural fabric with black printed design. Perfect for daily use or gifting.',
-    price: 449,
+      'Our signature cream canvas tote features the Willow.Prints Arts & Crafts logo in crisp black print. Made from sturdy, natural fabric that holds up to daily use, this bag is roomy enough for groceries, books, or a day out. The classic design works for gifting or keeping for yourself. Pair it with any outfit for a touch of handmade charm.',
+    price: 449.95,
     image: `${BASE}/products/tote-willowprints.jpg`,
     images: ['/products/tote-willowprints.jpg'],
     category: 'tote',
@@ -22,8 +22,8 @@ const initialProducts: Product[] = [
     id: '2',
     name: 'Themed Design Tote Bag',
     description:
-      'Cream canvas tote with a bold graphic design. Statement piece for fans of music and style. Durable construction, roomy interior.',
-    price: 499,
+      'Stand out with this cream canvas tote featuring a bold, graphic design. Perfect for expressing your style, it combines durable construction with a roomy interior. The high-quality print stays vivid wash after wash. Ideal for concerts, travel, or everyday carry—a statement piece that is also practical.',
+    price: 499.95,
     image: `${BASE}/products/tote-themed.jpg`,
     images: ['/products/tote-themed.jpg'],
     category: 'tote',
@@ -32,8 +32,8 @@ const initialProducts: Product[] = [
     id: '3',
     name: 'Personalized Burlap Tote',
     description:
-      'Natural burlap tote with white canvas pocket. Custom name printed in elegant script. White rope handles and button closure.',
-    price: 549,
+      'A natural burlap tote with a white canvas pocket personalised with a name in elegant script. White rope handles and a button closure give it a rustic, handmade feel. Choose a name and we will print it for you—great for gifts, events, or a unique everyday bag. Sturdy and distinctive.',
+    price: 549.5,
     image: `${BASE}/products/tote-personalized.jpg`,
     images: ['/products/tote-personalized.jpg'],
     category: 'tote',
@@ -42,8 +42,8 @@ const initialProducts: Product[] = [
     id: '4',
     name: "Happy Mother's Day Glass Mug",
     description:
-      'Clear glass mug with "Happy Mother\'s Day" in decorative script. Copper/bronze finish. Dishwasher-safe, perfect for a thoughtful gift.',
-    price: 349,
+      'A clear glass mug with "Happy Mother\'s Day" in decorative script and a subtle copper or bronze finish. Dishwasher-safe and perfect for coffee, tea, or hot chocolate. A thoughtful, lasting gift that she will use every morning. Simple, elegant, and made to be enjoyed year after year.',
+    price: 349.99,
     image: `${BASE}/products/mug-mothers-day.jpg`,
     images: ['/products/mug-mothers-day.jpg'],
     category: 'mug',
@@ -52,8 +52,8 @@ const initialProducts: Product[] = [
     id: '5',
     name: 'Personalized Acrylic Keychains',
     description:
-      'Clear acrylic keychains with custom names and floral designs. Multiple styles and colors. Includes keyring and optional tassel.',
-    price: 199,
+      'Clear acrylic keychains with your choice of name and floral or patterned designs. Available in oval or round shapes, with various text and background colours. Each comes with a keyring and an optional tassel. Perfect as favours, gifts, or a little treat for yourself. Lightweight and durable.',
+    price: 199.99,
     image: `${BASE}/products/keychains-acrylic.jpg`,
     images: ['/products/keychains-acrylic.jpg'],
     category: 'keychain',
@@ -62,8 +62,8 @@ const initialProducts: Product[] = [
     id: '6',
     name: 'Personalized Glass Mugs',
     description:
-      'Clear glass mugs with your name in elegant black script. Ideal for home, office, or as a gift.',
-    price: 349,
+      'Clear glass mugs personalised with a name in elegant black script. Ideal for the office, home, or as a thoughtful gift. The design is understated and timeless—great for anyone who appreciates a personal touch. Dishwasher-safe and built for everyday use.',
+    price: 349.99,
     image: `${BASE}/products/mugs-personalized.jpg`,
     images: ['/products/mugs-personalized.jpg'],
     category: 'mug',
@@ -72,8 +72,8 @@ const initialProducts: Product[] = [
     id: '7',
     name: 'Name Tag Keychains',
     description:
-      'Cream tag keychains with your name in bold neon pink. Gold clasp, colorful ball chain, heart carabiner. Fun and customizable.',
-    price: 249,
+      'Cream-coloured tag keychains with your name in bold neon pink. Gold lobster clasp, colourful ball chain, and a heart-shaped carabiner make these fun and easy to spot. Perfect for bags, keys, or as event giveaways. Cheerful, customizable, and made to last.',
+    price: 249.95,
     image: `${BASE}/products/keychains-name-tags.jpg`,
     images: ['/products/keychains-name-tags.jpg'],
     category: 'keychain',
