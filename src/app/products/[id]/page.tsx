@@ -3,20 +3,28 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
+import { useMemo, useState } from 'react';
 import { Carousel } from '@/components/Carousel';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { useProduct } from '@/hooks/use-products';
+import { useCart } from '@/context/cart-context';
 import { formatPricePHP } from '@/lib/format-price';
-import { useMemo } from 'react';
+
+const MIN_QTY = 1;
+const MAX_QTY = 99;
 
 /**
  * Product Detail Page: image carousel, name, description, price,
- * Add to Cart (placeholder), breadcrumb Home / Products / Product Name.
+ * quantity selector, Add to Cart, breadcrumb.
  */
 export default function ProductDetailPage() {
   const params = useParams();
   const id = typeof params.id === 'string' ? params.id : null;
   const { data: product, isLoading, error } = useProduct(id);
+  const { addItem } = useCart();
+  const [quantity, setQuantity] = useState(1);
+  const [added, setAdded] = useState(false);
 
   // Carousel slides: main image + gallery images if present
   const carouselSlides = useMemo(() => {
@@ -109,16 +117,56 @@ export default function ProductDetailPage() {
             <p className="mt-4 text-pastel-ink/80 leading-relaxed">
               {product.description}
             </p>
-            {/* Add to Cart – placeholder (no functionality yet) */}
-            <Button
-              className="mt-8 w-full bg-pastel-sage text-pastel-ink hover:bg-pastel-sage/90 sm:w-auto"
-              onClick={() => {
-                // Placeholder: could trigger toast or cart context later
-                console.log('Add to cart:', product.id);
-              }}
-            >
-              Add to Cart
-            </Button>
+
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="flex items-center gap-2">
+                <label htmlFor="quantity" className="text-sm font-medium text-pastel-ink">
+                  Quantity
+                </label>
+                <Input
+                  id="quantity"
+                  type="number"
+                  min={MIN_QTY}
+                  max={MAX_QTY}
+                  value={quantity}
+                  onChange={(e) => {
+                    const v = parseInt(e.target.value, 10);
+                    if (!Number.isNaN(v)) setQuantity(Math.min(MAX_QTY, Math.max(MIN_QTY, v)));
+                  }}
+                  className="w-20 border-pastel-border bg-card text-pastel-ink"
+                />
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="icon"
+                  className="shrink-0 border-pastel-border text-pastel-ink hover:bg-pastel-mist"
+                  onClick={() => setQuantity((q) => Math.max(MIN_QTY, q - 1))}
+                  aria-label="Decrease quantity"
+                >
+                  −
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="icon"
+                  className="shrink-0 border-pastel-border text-pastel-ink hover:bg-pastel-mist"
+                  onClick={() => setQuantity((q) => Math.min(MAX_QTY, q + 1))}
+                  aria-label="Increase quantity"
+                >
+                  +
+                </Button>
+              </div>
+              <Button
+                className="bg-pastel-sage text-pastel-ink hover:bg-pastel-sage/90"
+                onClick={() => {
+                  addItem(product, quantity);
+                  setAdded(true);
+                  setTimeout(() => setAdded(false), 2000);
+                }}
+              >
+                {added ? 'Added to cart' : 'Add to Cart'}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -2,10 +2,10 @@
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useState } from 'react';
+import { CartProvider } from '@/context/cart-context';
 
 /**
- * Wraps the app with TanStack Query's QueryClientProvider.
- * Client component so we can use React state for the client instance.
+ * Wraps the app with TanStack Query and Cart provider.
  */
 export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(
@@ -20,7 +20,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   );
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
+      <CartProvider>{children}</CartProvider>
     </QueryClientProvider>
   );
 }

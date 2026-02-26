@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Willow.Prints',
   description: 'Handcrafted prints, minimal & timeless.',
+  icons: {
+    icon: '/willowprints-logo.png',
+    apple: '/willowprints-logo.png',
+  },
 };
 
 export default function RootLayout({

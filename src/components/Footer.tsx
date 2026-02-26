@@ -38,6 +38,10 @@ export function Footer() {
             Products
           </a>
           <span className="text-pastel-ink/30" aria-hidden>·</span>
+          <a href="/cart" className="hover:text-pastel-ink">
+            Cart
+          </a>
+          <span className="text-pastel-ink/30" aria-hidden>·</span>
           {SOCIAL.map(({ href, label, aria, icon }) => (
             <a
               key={label}
