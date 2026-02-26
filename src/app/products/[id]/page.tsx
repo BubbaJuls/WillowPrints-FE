@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation';
 import { Carousel } from '@/components/Carousel';
 import { Button } from '@/components/ui/button';
 import { useProduct } from '@/hooks/use-products';
+import { formatPricePHP } from '@/lib/format-price';
 import { useMemo } from 'react';
 
 /**
@@ -103,7 +104,7 @@ export default function ProductDetailPage() {
               {product.name}
             </h1>
             <p className="mt-2 text-xl font-semibold text-pastel-ink">
-              ${product.price.toFixed(2)}
+              {formatPricePHP(product.price)}
             </p>
             <p className="mt-4 text-pastel-ink/80 leading-relaxed">
               {product.description}

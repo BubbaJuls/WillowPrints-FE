@@ -8,7 +8,7 @@ import { Footer } from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'WillowPrints',
+  title: 'Willow.Prints',
   description: 'Handcrafted prints, minimal & timeless.',
 };
 

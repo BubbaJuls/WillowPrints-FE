@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import type { Product } from '@/types/product';
 import { cn } from '@/lib/utils';
+import { formatPricePHP } from '@/lib/format-price';
 
 interface ProductCardProps {
   product: Product;
@@ -37,7 +38,7 @@ export function ProductCard({ product, variant = 'grid', className }: ProductCar
       <div className="flex flex-1 flex-col p-4">
         <h3 className="font-medium text-pastel-ink line-clamp-2">{product.name}</h3>
         <p className="mt-1 text-lg font-semibold text-pastel-ink">
-          ${product.price.toFixed(2)}
+          {formatPricePHP(product.price)}
         </p>
         <div className="mt-auto pt-4">
           {isFeatured ? (

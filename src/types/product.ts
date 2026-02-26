@@ -1,5 +1,5 @@
 /**
- * Product types for WillowPrints placeholder/mocked data.
+ * Product types for Willow.Prints (API or fallback data).
  * Replace with API types when connecting to WP-BE.
  */
 

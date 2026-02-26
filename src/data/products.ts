@@ -1,111 +1,108 @@
 /**
- * Placeholder product data (mocked JSON).
- * In production, replace with API calls to WP-BE.
+ * Fallback product data when API is not configured.
+ * Prices in Philippine pesos (PHP). Images in public/products/.
  */
 
 import type { Product, HeroSlide } from '@/types/product';
 
-// Hero carousel slides – minimal pastel-style imagery
-export const heroSlides: HeroSlide[] = [
-  {
-    id: '1',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&q=80',
-    alt: 'Soft pastel art print',
-    title: 'Handcrafted Prints',
-    subtitle: 'Minimal & timeless',
-  },
-  {
-    id: '2',
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=1200&q=80',
-    alt: 'Cozy workspace',
-    title: 'For Your Space',
-    subtitle: 'Art that feels like home',
-  },
-  {
-    id: '3',
-    image: 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=1200&q=80',
-    alt: 'Botanical illustration',
-    title: 'WillowPrints',
-    subtitle: 'Small batch, made with care',
-  },
-];
+const BASE = '';
 
-// Placeholder products – used for Home featured and Products grid
-export const placeholderProducts: Product[] = [
+const initialProducts: Product[] = [
   {
     id: '1',
-    name: 'Botanical No. 1',
+    name: 'Willow.Prints Logo Tote Bag',
     description:
-      'A delicate botanical print on archival paper. Perfect for a calm corner or above your desk.',
-    price: 28.0,
-    image: 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=800&q=80',
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
-    ],
-    category: 'botanical',
+      'Cream canvas tote with the Willow.Prints Arts & Crafts logo. Sturdy, natural fabric with black printed design. Perfect for daily use or gifting.',
+    price: 449,
+    image: `${BASE}/products/tote-willowprints.jpg`,
+    images: ['/products/tote-willowprints.jpg'],
+    category: 'tote',
   },
   {
     id: '2',
-    name: 'Dawn Landscape',
+    name: 'Themed Design Tote Bag',
     description:
-      'Soft gradient landscape print. Brings a quiet, morning mood to any room.',
-    price: 32.0,
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&q=80',
-      'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=800&q=80',
-    ],
-    category: 'landscape',
+      'Cream canvas tote with a bold graphic design. Statement piece for fans of music and style. Durable construction, roomy interior.',
+    price: 499,
+    image: `${BASE}/products/tote-themed.jpg`,
+    images: ['/products/tote-themed.jpg'],
+    category: 'tote',
   },
   {
     id: '3',
-    name: 'Abstract Blush',
+    name: 'Personalized Burlap Tote',
     description:
-      'Minimal abstract print in blush and cream. Fits seamlessly into pastel interiors.',
-    price: 26.0,
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
-      'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&q=80',
-    ],
-    category: 'abstract',
+      'Natural burlap tote with white canvas pocket. Custom name printed in elegant script. White rope handles and button closure.',
+    price: 549,
+    image: `${BASE}/products/tote-personalized.jpg`,
+    images: ['/products/tote-personalized.jpg'],
+    category: 'tote',
   },
   {
     id: '4',
-    name: 'Muted Florals',
+    name: "Happy Mother's Day Glass Mug",
     description:
-      'Gentle floral composition with muted tones. Printed on sustainable paper.',
-    price: 30.0,
-    image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&q=80',
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
-    ],
-    category: 'botanical',
+      'Clear glass mug with "Happy Mother\'s Day" in decorative script. Copper/bronze finish. Dishwasher-safe, perfect for a thoughtful gift.',
+    price: 349,
+    image: `${BASE}/products/mug-mothers-day.jpg`,
+    images: ['/products/mug-mothers-day.jpg'],
+    category: 'mug',
   },
   {
     id: '5',
-    name: 'Soft Geometry',
-    description: 'Clean geometric shapes in soft pastels. Ideal for modern, minimal spaces.',
-    price: 24.0,
-    image: 'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800&q=80',
-      'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&q=80',
-    ],
-    category: 'abstract',
+    name: 'Personalized Acrylic Keychains',
+    description:
+      'Clear acrylic keychains with custom names and floral designs. Multiple styles and colors. Includes keyring and optional tassel.',
+    price: 199,
+    image: `${BASE}/products/keychains-acrylic.jpg`,
+    images: ['/products/keychains-acrylic.jpg'],
+    category: 'keychain',
   },
   {
     id: '6',
-    name: 'Meadow Study',
-    description: 'Inspired by quiet meadows. A restful addition to bedrooms or reading nooks.',
-    price: 29.0,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
-      'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=800&q=80',
-    ],
-    category: 'landscape',
+    name: 'Personalized Glass Mugs',
+    description:
+      'Clear glass mugs with your name in elegant black script. Ideal for home, office, or as a gift.',
+    price: 349,
+    image: `${BASE}/products/mugs-personalized.jpg`,
+    images: ['/products/mugs-personalized.jpg'],
+    category: 'mug',
+  },
+  {
+    id: '7',
+    name: 'Name Tag Keychains',
+    description:
+      'Cream tag keychains with your name in bold neon pink. Gold clasp, colorful ball chain, heart carabiner. Fun and customizable.',
+    price: 249,
+    image: `${BASE}/products/keychains-name-tags.jpg`,
+    images: ['/products/keychains-name-tags.jpg'],
+    category: 'keychain',
   },
 ];
+
+// Hero carousel: first 3 products
+export const heroSlides: HeroSlide[] = [
+  {
+    id: 'hero-1',
+    image: '/products/tote-willowprints.jpg',
+    alt: 'Willow.Prints Logo Tote',
+    title: 'Willow.Prints',
+    subtitle: 'Arts & Crafts',
+  },
+  {
+    id: 'hero-2',
+    image: '/products/tote-themed.jpg',
+    alt: 'Themed Design Tote',
+    title: 'Handcrafted totes & more',
+    subtitle: 'Made with care',
+  },
+  {
+    id: 'hero-3',
+    image: '/products/mug-mothers-day.jpg',
+    alt: "Mother's Day Mug",
+    title: 'Personalized gifts',
+    subtitle: 'Mugs, keychains & bags',
+  },
+];
+
+export const placeholderProducts: Product[] = initialProducts;

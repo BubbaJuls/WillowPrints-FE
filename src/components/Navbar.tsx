@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -14,9 +15,17 @@ export function Navbar() {
       <nav className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link
           href="/home"
-          className="text-lg font-semibold text-pastel-ink hover:text-pastel-ink/90"
+          className="flex items-center gap-2 text-pastel-ink hover:opacity-90"
+          aria-label="Willow.Prints – Home"
         >
-          WillowPrints
+          <Image
+            src="/willowprints-logo.png"
+            alt="Willow.Prints Arts & Crafts"
+            width={120}
+            height={40}
+            className="h-8 w-auto object-contain"
+            priority
+          />
         </Link>
         <ul className="flex items-center gap-6">
           {navLinks.map(({ href, label }) => (

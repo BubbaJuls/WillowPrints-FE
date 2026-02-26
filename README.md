@@ -1,6 +1,6 @@
-# WillowPrints Frontend (WP-FE)
+# Willow.Prints Frontend (WP-FE)
 
-Next.js frontend with TypeScript, Tailwind CSS, and Shadcn UI. Minimal pastel styling.
+Next.js frontend with TypeScript, Tailwind CSS, and Shadcn UI. Minimal pastel styling. Prices in Philippine pesos (₱).
 
 ## Run locally
 
@@ -12,6 +12,18 @@ npm run dev
 ```
 
 Open [http://localhost:3001](http://localhost:3001). The app redirects `/` to `/home`.
+
+### Product images
+
+Initial products expect images in `public/products/` with these filenames (add your own photos):
+
+- `tote-willowprints.jpg` – Logo tote  
+- `tote-themed.jpg` – Themed design tote  
+- `tote-personalized.jpg` – Personalized burlap tote  
+- `mug-mothers-day.jpg` – Mother's Day glass mug  
+- `keychains-acrylic.jpg` – Acrylic keychains  
+- `mugs-personalized.jpg` – Personalized glass mugs  
+- `keychains-name-tags.jpg` – Name tag keychains  
 
 ### Supabase (optional)
 
