@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { Carousel } from '@/components/Carousel';
 import { ProductCard } from '@/components/ProductCard';
-import { Button } from '@/components/ui/button';
 import { useFeaturedProducts, useHeroSlides } from '@/hooks/use-products';
 
 /**
@@ -64,11 +63,55 @@ export default function HomePage() {
             ))}
           </div>
         ) : null}
+      </section>
 
-        <div className="mt-12 flex justify-center">
-          <Button asChild className="bg-pastel-sage text-pastel-ink hover:bg-pastel-sage/90">
-            <Link href="/products">Shop Now</Link>
-          </Button>
+      {/* Contact us */}
+      <section className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6" id="contact">
+        <div className="rounded-lg border border-pastel-border/60 bg-card/50 px-6 py-8 text-pastel-ink sm:px-8 sm:py-10">
+          <h2 className="text-xl font-semibold text-pastel-ink sm:text-2xl">
+            Contact us
+          </h2>
+          <p className="mt-2 text-pastel-ink/80">
+            Questions, custom orders, or just saying hi—we’d love to hear from you.
+          </p>
+
+          <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-8">
+            <a
+              href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'contact@willowprints.com'}`}
+              className="inline-flex items-center gap-2 text-pastel-sage font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-pastel-sage/50 focus:ring-offset-2 rounded"
+            >
+              <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Send us an email
+            </a>
+
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-pastel-ink/70">Follow us:</span>
+              <a
+                href="https://web.facebook.com/Willowprints0102"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center rounded-full p-2 text-pastel-ink/80 hover:bg-pastel-mist hover:text-pastel-ink focus:outline-none focus:ring-2 focus:ring-pastel-sage/50 focus:ring-offset-2"
+                aria-label="Willow.Prints on Facebook"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/willow.printss/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center rounded-full p-2 text-pastel-ink/80 hover:bg-pastel-mist hover:text-pastel-ink focus:outline-none focus:ring-2 focus:ring-pastel-sage/50 focus:ring-offset-2"
+                aria-label="Willow.Prints on Instagram"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.667.072-4.947.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>
