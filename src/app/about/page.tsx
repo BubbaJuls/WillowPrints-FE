@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 export default function AboutPage() {
   return (
-    <main className="willow-route flex min-h-screen flex-col bg-pastel-cream">
+    <main className="willow-route flex min-h-screen flex-col">
       <div className="mx-auto w-full max-w-2xl flex-1 px-4 py-12 sm:px-6">
         <h1 className="text-3xl font-bold text-pastel-ink mb-6">About Willow.Prints</h1>
 

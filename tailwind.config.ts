@@ -16,6 +16,7 @@ const config: Config = {
           mist: '#f0ebe3',
           sage: '#9caa8a',
           blush: '#e8dcd5',
+          tan: '#e2d9cf',
           ink: '#3d3d3d',
           border: '#e5dfd8',
         },

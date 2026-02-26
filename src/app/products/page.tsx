@@ -12,7 +12,7 @@ export default function ProductsPage() {
   const { data: products, isLoading, error } = useProducts();
 
   return (
-    <div className="willow-route flex min-h-screen flex-col bg-pastel-cream">
+    <div className="willow-route flex min-h-screen flex-col">
       <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6">
         <h1 className="text-2xl font-semibold text-pastel-ink sm:text-3xl">
           All products

@@ -31,7 +31,7 @@ export default function ProductDetailPage() {
 
   if (isLoading) {
     return (
-      <div className="willow-route flex min-h-screen flex-col bg-pastel-cream">
+      <div className="willow-route flex min-h-screen flex-col">
         <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6">
           <div className="h-6 w-48 animate-pulse rounded bg-pastel-mist" />
           <div className="mt-8 aspect-square max-w-lg animate-pulse rounded-lg bg-pastel-mist" />
@@ -44,7 +44,7 @@ export default function ProductDetailPage() {
 
   if (error || !product) {
     return (
-      <div className="willow-route flex min-h-screen flex-col items-center justify-center bg-pastel-cream px-4">
+      <div className="willow-route flex min-h-screen flex-col items-center justify-center px-4">
         <p className="text-pastel-ink/80">Product not found.</p>
         <Button asChild variant="outline" className="mt-4">
           <Link href="/products">Back to products</Link>
@@ -54,7 +54,7 @@ export default function ProductDetailPage() {
   }
 
   return (
-    <div className="willow-route flex min-h-screen flex-col bg-pastel-cream">
+    <div className="willow-route flex min-h-screen flex-col">
       <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6">
         {/* Breadcrumb: Home / Products / Product Name */}
         <nav aria-label="Breadcrumb" className="mb-8">
