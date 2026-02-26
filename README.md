@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The app redirects `/` to `/home`.
+Open [http://localhost:3001](http://localhost:3001). The app redirects `/` to `/home`.
 
 ### Supabase (optional)
 
